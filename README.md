@@ -15,7 +15,9 @@ Workbench is an easy way to start Peatio development environment.
 
 ```sh
 git clone --recursive https://github.com/rubykube/workbench.git
+git submodule foreach git checkout master
 ```
+Note: --recursive did not pull according to .gitmodule file for some reason, hence explicit submodule branch checkout
 
 2. Move to workbench
 

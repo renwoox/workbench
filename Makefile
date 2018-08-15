@@ -7,6 +7,9 @@ default: run
 build:
 	$(COMPOSE) build peatio barong toolbox
 
+rebuild:
+	$(COMPOSE) build --no-cache peatio barong toolbox
+
 geth:
 	$(COMPOSE) up -d geth
 
@@ -56,3 +59,7 @@ update:
 
 down:
 	@$(COMPOSE) down
+
+purge:
+	docker system prune -a
+	docker volumn prune
